@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <title> IFSP </title>
 </head>
 <body>
+
+    <div id="menu"></div>
+
+    <a> <b> Cursos </b> </a>
+
+    <ul>  
+      <li> <a href="/DWBA4-03/curso_ads.html">Análise e Desenvolvimento de Sistemas</a> </li>
+      <li> <a href="/DWBA4-03/curso_egp.html">Engenharia de Produção</a> </li>
+      <li> <a href="/DWBA4-03/curso_gti.html">Gestão em Tecnologia da Informação</a> </li>
+      <li> <a href="/DWBA4-03/curso_letras.html">Letras</a> </li>
+      <li> <a href="/DWBA4-03/curso_gp.html">Gestão Pública</a></li>
+    </ul>
     
     <img src='./src/Logo.jpg' id="imgTopo" alt="Imagem promocional do evento" />
 
@@ -18,7 +32,7 @@
 
     <h2> Sobre a biblioteca </h2>
 
-    <img src='./src/library.jpeg' alt="Imagem promocional do evento" />
+    <figure> <img src='./src/library.jpeg' alt="Imagem promocional do evento" /> </figure>
 
     <h2> Conheça os novos títulos disponíveis na nossa biblioteca </h2>
     <span>Publicado: Quarta-feira, 14 de agosto de 2019</span>
@@ -35,7 +49,14 @@
     <p>IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP - Contato: (011) 2504-0100</p>
 </body>
 
-<footer>
+<footer>    
+    <script>
+        $(document).ready(function(){
+            $.get( "header.html", function( data ) {
+              $( "#menu" ).html( data );
+            });
+        });
+    </script>
 
     <script type="module">
         // Import the functions you need from the SDKs you need
